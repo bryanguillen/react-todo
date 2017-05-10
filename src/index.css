@@ -1,0 +1,51 @@
+body * {
+	box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.input-container {
+	text-align: center;
+	padding-top: 25px;
+}
+
+.input-container > input, .input-container > button {
+	height: 35px;
+}
+
+.input-container > input {
+	width: 250px;
+	border: 1px solid grey;
+	padding: 10px;
+}
+
+.input-container > button {
+	width: 150px;
+	margin-left: 15px; 
+	margin-bottom: 0px;
+	border: 0;
+}
+
+.item {
+	width: 95%;
+	margin: 10px auto;
+}
+
+.action {
+	border: 0;
+	width: 100px;
+}
+
+.delete {
+	margin-left: 10px; 
+}
+
+@media only screen and (min-width: 992px) {
+	.item {
+		width: 75%;
+	}
+}
