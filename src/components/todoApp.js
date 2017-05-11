@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+// import update from 'immutability-helper';
 import TodoInput from './todoInput';
 import TodoList from './todoList';
 
@@ -8,7 +9,7 @@ export class TodoApp extends React.Component {
 		return (
 			<div>
 				<TodoInput />
-				<TodoList items={this.props.items} />
+				<TodoList  items={this.props.items} />
 			</div>
 		);
 	}
