@@ -1,4 +1,5 @@
 import * as actions from '../actions/index';
+import update from 'immutability-helper';
 
 const initialState = {
 
@@ -35,6 +36,16 @@ export const todoReducer = (state=initialState, action) => {
 					...state.items.slice(action.index + 1)
 					]
 		}	
+	} else if (action.type === actions.CHECK_ITEM) {
+		let isChecked = state.items[action.index].checked;
+		if (!isChecked) {
+			let updatedObj = update(state.items[action.index], { checked: {$set: true } });
+			let newData = update(state.items, {$splice: [[action.index, 1, updatedObj]]});
+			return { items: newData };
+		}
+		let updatedObj = update(state.items[action.index], { checked: {$set: false } });
+		let newData = update(state.items, {$splice: [[action.index, 1, updatedObj]]});
+		return { items: newData };
 	}
 	return state;
 }
