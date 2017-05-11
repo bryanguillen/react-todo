@@ -9,7 +9,6 @@ export default function TodoList(props) {
 						key={index}
 						id={index} 
 						itemName={item.itemName} 
-						onClick={props.onClick} 
 						/>
 				);
 			}
@@ -19,7 +18,6 @@ export default function TodoList(props) {
 				key={index}
 				id={index} 
 				itemName={item.itemName} 
-				onClick={props.onClick}
 				checked="checked"
 				/>
 			);
