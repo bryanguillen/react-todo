@@ -3,8 +3,10 @@ import React from 'react';
 export default function TodoInput(props) {
 	return (
 		<div className="input-container">
-			<input id="item" type="text" placeholder="Pick Up The Kids" onChange={props.onChange} />
-			<button>Submit</button>
+			<form onSubmit={props.onSubmit}>
+				<input onChange={props.onChange} value={props.value} id="item" type="text" placeholder="Pick Up The Kids" />
+				<button type="submit" value="Submit">Submit</button>
+			</form>
 		</div>
 	);
 }
