@@ -29,6 +29,12 @@ export const todoReducer = (state=initialState, action) => {
 				}
 			]
 		})
+	} else if (action.type === actions.DELETE_ITEM) {
+		return { 
+			items:	[...state.items.slice(0, action.index),
+					...state.items.slice(action.index + 1)
+					]
+		}	
 	}
 	return state;
 }
