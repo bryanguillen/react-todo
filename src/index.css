@@ -13,17 +13,17 @@ body {
 	padding-top: 25px;
 }
 
-.input-container > input, .input-container > button {
+.input-container > input, .submit-item {
 	height: 35px;
 }
 
-.input-container > input {
+.item-form > input {
 	width: 250px;
 	border: 1px solid grey;
 	padding: 10px;
 }
 
-.input-container > button {
+.submit-item {
 	width: 150px;
 	margin-left: 15px; 
 	margin-bottom: 0px;
@@ -33,6 +33,10 @@ body {
 .item {
 	width: 95%;
 	margin: 10px auto;
+}
+
+.checked {
+	text-decoration: line-through;
 }
 
 .action {
